@@ -5,9 +5,9 @@ import java.util.List;
 
 public class PlayerResposnse {
     @SerializedName("player")
-    private List<Player> players;
+    private List<Player> player;
 
-    public List<Player> getPlayers() {
-        return players;
+    public List<Player> getPlayer() {
+        return player;
     }
 }

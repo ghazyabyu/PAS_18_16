@@ -30,7 +30,7 @@ public class AdapterPlayer extends RecyclerView.Adapter<AdapterPlayer.ViewHolder
     public AdapterPlayer.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext())
                 .inflate(R.layout.item_layout, parent, false);
-        return new AdapterPlayer(view);
+        return new ViewHolder(view);
     }
 
     @Override
@@ -39,6 +39,8 @@ public class AdapterPlayer extends RecyclerView.Adapter<AdapterPlayer.ViewHolder
         holder.tvTeam.setText(player.getStrTeam());
         holder.tvStadium.setText(player.getStrPosition());
         holder.tvplayer.setText(player.getStrPlayer());
+
+
     }
 
     @Override

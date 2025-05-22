@@ -33,12 +33,12 @@ public class Listolahraga_Fragment extends Fragment{
         return view;
 }
     private void fetchPlayer(APIService api) {
-        api.getPlayer("Tes").enqueue(new Callback<TeamResponse>() {
+        api.getPlayer("133604").enqueue(new Callback<PlayerResposnse>() {
             @Override
-            public void onResponse(Call<TeamResponse> call, Response<TeamResponse> response) {
+            public void onResponse(Call<PlayerResposnse> call, Response<PlayerResposnse> response) {
                 if (response.isSuccessful() && response.body() != null) {
-                    List<Team> players = response.body().getTeams();
-                    adapter = new AdapterPlayer(players);
+                    List<Player> player = response.body().getPlayer();
+                    adapter = new AdapterPlayer(player);
                     rvlistolahraga.setAdapter(adapter);
                     rvlistolahraga.setVisibility(View.VISIBLE);
                     progressBar.setVisibility(View.GONE);
@@ -46,7 +46,7 @@ public class Listolahraga_Fragment extends Fragment{
             }
 
             @Override
-            public void onFailure(Call<TeamResponse> call, Throwable t) {
+            public void onFailure(Call<PlayerResposnse> call, Throwable t) {
                 Log.e("API_ERROR", t.getMessage());
             }
         });

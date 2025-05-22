@@ -9,6 +9,6 @@ public interface APIService {
     Call<TeamResponse> getEnglishPremierleague(@Query("las") String league);
 
     @GET("lookup_all_players.php")
-    Call<PlayerResposnse> getPlayer(@Query("id") String id); //
+    Call<PlayerResposnse> getPlayer(@Query("id") String player); //
 
 }

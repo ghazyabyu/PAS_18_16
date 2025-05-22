@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+ <item
+     android:id="@+id/nav_premier"
+     android:icon="@drawable/ball"
+     android:title="Premier" />
+ <item
+     android:id="@+id/nav_listolahraga"
+     android:icon="@drawable/ball"
+     android:title="List olahraga" />
+ <item
+     android:id="@+id/nav_profile"
+     android:icon="@drawable/person"
+     android:title="profile" />
+</menu>
